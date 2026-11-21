@@ -25,7 +25,7 @@ export default function WhyChooseUs() {
         </Reveal>
         <div className="card-grid">
           {points.map((p, i) => (
-            <Reveal key={i} delay={i * 0.1}>
+            <Reveal key={p.title} delay={i * 0.1}>
               <div className="card why-card">
                 <div className="num">✓</div>
                 <h3>{p.title}</h3>
