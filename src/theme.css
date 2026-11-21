@@ -141,3 +141,23 @@ html, body { overflow-x: hidden; }
 /* Navbar logo ka size */
 .nav-logo { height: 48px; width: auto; }
 @media (max-width: 900px) { .nav-logo { height: 42px; } }
+@media (max-width: 900px) {
+  /* photo ke upar gehra neela parda, taake text saaf padha jaye */
+  section.hero::before {
+    content: ''; position: absolute; inset: 0;
+    width: auto; height: auto; right: auto; top: 0;
+    border-radius: 0; box-shadow: none; animation: none; opacity: 1;
+    background: linear-gradient(180deg, rgba(11,42,91,.9), rgba(11,42,91,.8));
+    z-index: 2;
+  }
+  section.hero::after { display: none; }
+  .hero-inner { position: relative; z-index: 3; }
+
+  /* text ke rang */
+  .hero h1 { color: #fff; }
+  .hero h1 span { color: var(--gold-light); }
+  .hero p { color: #e8eefb; }
+  .hero .eyebrow { color: var(--gold-light); }
+  .hero-points { color: #fff; }
+  .btn-outline { background: #fff; color: var(--blue); }
+}
