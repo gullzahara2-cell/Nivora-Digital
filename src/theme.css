@@ -128,3 +128,16 @@ section.hero::after {
 @media (max-width: 768px) { .detail-grid, .contact-grid { grid-template-columns: 1fr; } }
 .why-card { text-align: left; }
 .why-card .num { font-size: 22px; }
+/* ===== Mobile fixes ===== */
+img { max-width: 100%; height: auto; }
+html, body { overflow-x: hidden; }
+
+/* 3D + blend se aadhi image wala bug */
+.about-visual { transform: none !important; overflow: hidden; padding: 28px; }
+.about-visual img, .nav-logo, .footer-logo { mix-blend-mode: normal !important; }
+.about-visual img { display: block; width: 100%; max-width: 320px; height: auto; margin: 0 auto; object-fit: contain; }
+.about-grid > * { min-width: 0; }
+
+/* Navbar logo ka size */
+.nav-logo { height: 48px; width: auto; }
+@media (max-width: 900px) { .nav-logo { height: 42px; } }
