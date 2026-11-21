@@ -31,7 +31,7 @@
   transition: transform .3s, border-color .3s; }
 .card:hover { transform: translateY(-6px); border-color: var(--gold); }
 .card-image {
-  height: 180px;
+  height: 220px;
   margin: -32px -32px 22px;
   overflow: hidden;
   border-radius: var(--radius) var(--radius) 0 0;
@@ -43,6 +43,7 @@
   height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center;
   transition: transform .45s ease, filter .45s ease;
 }
 .card:hover .card-image img {
@@ -415,6 +416,9 @@
     padding: 28px 20px;
   }
   .discussion-box .btn { width: 100%; text-align: center; }
+}
+@media (max-width: 700px) {
+  .card-image { height: 180px; }
 }
 @media (max-width: 768px) {
   .about-visual,

@@ -19,14 +19,18 @@ export default function Navbar() {
           <img src={logo} alt="Nivora Digital logo" className="nav-logo" />
         </Link>
         <nav className={`nav-links ${open ? 'open' : ''}`}>
-          {links.map(l => (
-            <NavLink key={l.to} to={l.to} end onClick={() => setOpen(false)}>
-              {l.label}
-            </NavLink>
-          ))}
-          <Link to="/contact" className="btn" onClick={() => setOpen(false)}>
-            Get in Touch
-          </Link>
+          {links.map((link) => {
+            return (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                end
+                onClick={() => setOpen(false)}
+              >
+                {link.label}
+              </NavLink>
+            )
+          })}
         </nav>
         <button className="burger" onClick={() => setOpen(!open)} aria-label="Toggle menu">
           {open ? '✕' : '☰'}
