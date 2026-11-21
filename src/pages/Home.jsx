@@ -5,7 +5,7 @@ import AboutSection from '../components/AboutSection'
 import ServicesPreview from '../components/ServicesPreview'
 import Registration from '../components/Registration'
 import SEO from '../components/SEO'
-import WhyChooseUs from '../components/whychooseUs'
+import WhyChooseUs from "../components/WhyChooseUs";
 
 export default function Home() {
   return (
