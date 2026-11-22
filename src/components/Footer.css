@@ -16,3 +16,46 @@
 .footer a:hover { color: var(--gold); }
 .footer-bottom { text-align: center; padding: 20px; color: var(--muted); font-size: 14px; border-top: 1px solid rgba(255,255,255,.08); }
 @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } }
+footer,
+.footer {
+  background: #000 !important;
+  border-top: 2px solid #c9a66b !important;
+}
+
+footer h3,
+footer h4,
+.footer h3,
+.footer h4 {
+  color: #c9a66b !important;
+}
+
+footer a,
+footer p,
+footer li,
+.footer a,
+.footer p,
+.footer li {
+  color: #f1e6cf !important;
+}
+
+footer a:hover,
+.footer a:hover {
+  color: #c9a66b !important;
+}
+
+/* neeche copyright wali patti */
+footer [class*="bottom"],
+footer [class*="copy"],
+.footer [class*="bottom"],
+.footer [class*="copy"] {
+  border-top: 1px solid rgba(201, 166, 107, 0.25) !important;
+  background: transparent !important;
+}
+
+/* logo ka dabba saaf ho jaye */
+footer img,
+.footer img {
+  box-shadow: none !important;
+  filter: none !important;
+  border-radius: 0 !important;
+}

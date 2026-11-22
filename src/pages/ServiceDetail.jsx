@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader'
 import Reveal from '../components/Reveal'
 import { services } from '../data/content'
 import { waLink } from '../data/siteInfo'
-import heroImage from '../assets/hero (1).jpg'
+import heroImage from '../assets/hero.jpg'
 
 export default function ServiceDetail() {
   const { slug } = useParams()
@@ -26,10 +26,19 @@ export default function ServiceDetail() {
             />
             <h2>{s.heading}</h2>
             <p className="muted-text">{s.longText}</p>
-            <div className="hero-btns" style={{ marginTop: 28 }}>
+            <div
+              className="hero-btns"
+              style={{ marginTop: 28, display: 'flex', gap: 16, flexWrap: 'wrap' }}
+            >
               <Link to="/contact" className="btn">Contact Us</Link>
-              <a href={waLink(`Hello Nivora Digital, I am interested in ${s.title}.`)}
-                 target="_blank" rel="noopener noreferrer" className="btn btn-outline">WhatsApp Us</a>
+              <a
+                href={waLink(`Hello Nivora Digital, I am interested in ${s.title}.`)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+              >
+                WhatsApp Us
+              </a>
             </div>
           </Reveal>
           <aside className="detail-side">

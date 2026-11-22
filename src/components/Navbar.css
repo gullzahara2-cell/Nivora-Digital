@@ -1,83 +1,111 @@
-.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(12,19,31,.92); backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(201,166,107,.2); }
-.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; }
-.nav-logo {
-  height: 68px;
-  width: auto;
-  filter:
-    drop-shadow(2px 3px 0 rgba(112, 82, 35, .75))
-    drop-shadow(5px 8px 10px rgba(11, 42, 91, .28))
-    contrast(1.08) saturate(1.12);
-  transform: perspective(500px) rotateY(-3deg);
-  transition: transform .35s ease, filter .35s ease;
-}
-.nav-logo:hover {
-  transform: perspective(500px) rotateY(3deg) translateY(-2px);
-  filter:
-    drop-shadow(3px 4px 0 rgba(112, 82, 35, .8))
-    drop-shadow(7px 10px 14px rgba(11, 42, 91, .32))
-    contrast(1.12) saturate(1.18);
-}
-.nav-links { display: flex; align-items: center; gap: 32px; }
-.nav-links a:not(.btn) { color: var(--text); font-size: 15px; transition: color .3s; }
-.nav-links a:not(.btn):hover, .nav-links a.active { color: var(--gold); }
-.nav-links .btn { padding: 10px 22px; font-size: 14px; }
-.burger { display: none; background: none; border: none; color: var(--gold); font-size: 28px; cursor: pointer; }
-
-@media (max-width: 900px) {
-  .burger { display: block; }
-  .nav-links {
-  position: absolute; top: 80px; left: 0; right: 0;
-  flex-direction: column;
-  background: var(--navy);
-  padding: 30px 0; gap: 22px;
-  transform: translateY(-120%);
-  visibility: hidden;
-  transition: transform .35s, visibility .35s;
-  z-index: -1;
-}
-.nav-links.open {
-  transform: translateY(0);
-  visibility: visible;
-}
+/* ===== NAVBAR ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #000;
+  border-bottom: 2px solid #c9a66b;
 }
 
-.navbar,
-header {
-  border: none !important;
-  outline: none !important;
-}
-
-.navbar::before,
-.navbar::after,
-header::before,
-header::after {
-  display: none !important;
-}
-
-/* logo ka 3D box effect */
-.navbar img,
-.logo,
-.logo img {
-  box-shadow: none !important;
-  filter: none !important;
-  border: none !important;
-  transform: none !important;
-}
-.nav,
 .nav-inner {
-  border: none !important;
-  border-top: none !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
-  outline: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 92px;
 }
 
-.nav::before,
-.nav::after,
-.nav-inner::before,
-.nav-inner::after {
-  display: none !important;
-  content: none !important;
+/* logo: pehle jaisa */
+.nav .nav-logo,
+.nav .nav-logo img {
+  height: 76px;
+  width: auto;
+  max-width: none;
+  display: block;
+  box-shadow: none;
+  border-radius: 0;
+  transform: none;
+  filter: brightness(1.5) contrast(1.1);
 }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.nav-links a:not(.btn) {
+  color: #f1e6cf;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+.nav-links a:not(.btn):hover,
+.nav-links a.active {
+  color: #c9a66b;
+}
+.nav-links .btn {
+  padding: 10px 22px;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #c9a66b;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+  .nav-inner { height: 76px; }
+
+  .nav .nav-logo,
+  .nav .nav-logo img { height: 56px; }
+
+  .burger { display: block; }
+
+  .nav-links {
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 22px;
+    padding: 30px 0;
+    background: #000;
+    transform: translateY(-120%);
+    visibility: hidden;
+    transition: transform 0.35s, visibility 0.35s;
+    z-index: -1;
+  }
+  .nav-links.open {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+/* ===== KALA BACKGROUND LAZMI (isay file se hatana nahi) ===== */
+header.nav,
+.nav,
+.nav .nav-inner,
+.nav .container {
+  background: #000 !important;
+  backdrop-filter: none !important;
+}
+
+header.nav,
+.nav {
+  border-bottom: 2px solid #c9a66b !important;
+}
+
+.nav .nav-links a:not(.btn) { color: #f1e6cf !important; }
+.nav .nav-links a:not(.btn):hover,
+.nav .nav-links a.active { color: #c9a66b !important; }
+
+.nav .burger {
+  color: #c9a66b !important;
+  background: transparent !important;
+}
+.nav .nav-links.open { background: #000 !important; }

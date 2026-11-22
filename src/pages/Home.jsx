@@ -1,11 +1,10 @@
-// import WhyChooseUs from '../components/WhyChooseUs'
 import Hero from '../components/Hero'
 import Introduction from '../components/Introduction'
 import AboutSection from '../components/AboutSection'
 import ServicesPreview from '../components/ServicesPreview'
 import Registration from '../components/Registration'
 import SEO from '../components/SEO'
-import WhyChooseUs from "../components/WhyChooseUs";
+import WhyChooseUs from '../components/WhyChooseUs'
 
 export default function Home() {
   return (
