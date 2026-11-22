@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 import './Hero.css'
-import heroImage from '../assets/hero.png'
+import heroImage from '../assets/hero (1).jpg'
 
 const fade = (d) => ({ initial: { opacity: 0, y: 30 }, animate: { opacity: 1, y: 0 }, transition: { duration: .7, delay: d } })
 

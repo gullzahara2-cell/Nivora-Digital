@@ -3,7 +3,7 @@ import importImage from '../assets/import.jpg'
 import exportImage from '../assets/export.jpg'
 import logisticsImage from '../assets/logistic&shipping.jpg'
 import buyerShippingImage from '../assets/buyer&shipping.jpg'
-import sourcingImage from '../assets/buyyer&source.jpg'
+import sourcingImage from '../assets/buyer&sourcing.jpg'
 import webImage from '../assets/web.jpg'
 
 export const intro = {

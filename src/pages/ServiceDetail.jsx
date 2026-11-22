@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader'
 import Reveal from '../components/Reveal'
 import { services } from '../data/content'
 import { waLink } from '../data/siteInfo'
-import heroImage from '../assets/hero.png'
+import heroImage from '../assets/hero (1).jpg'
 
 export default function ServiceDetail() {
   const { slug } = useParams()
